@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-09-12T07:19:03.119228",
+  "vocab_size": 26,
+  "window_size": 10,
+  "epochs_trained": 6,
+  "final_train_loss": 0.0017150224884971976,
+  "final_val_loss": 0.00021851788915228099,
+  "final_train_accuracy": 1.0,
+  "final_val_accuracy": 1.0,
+  "hyperparameters": {
+    "embedding_dim": 64,
+    "lstm_units": 128,
+    "num_lstm_layers": 2,
+    "dense_units": 64,
+    "dropout_rate": 0.2,
+    "learning_rate": 0.001,
+    "batch_size": 64,
+    "top_k": 9
+  }
+}

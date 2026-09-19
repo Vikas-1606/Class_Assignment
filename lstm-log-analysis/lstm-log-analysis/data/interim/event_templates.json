@@ -1,0 +1,202 @@
+[
+  {
+    "EventId": "E1",
+    "Template": "Receiving block <*> src: <*> dest: <*>",
+    "Regex": "Receiving block (blk_-?\\d+) src: (\\S+) dest: (\\S+)",
+    "Component": "dfs.DataNode$DataXceiver",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E2",
+    "Template": "BLOCK* NameSystem.allocateBlock: <*> <*>",
+    "Regex": "BLOCK\\* NameSystem\\.allocateBlock: (\\S+) (blk_-?\\d+)",
+    "Component": "dfs.FSNamesystem",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E3",
+    "Template": "PacketResponder <*> for block <*> terminating",
+    "Regex": "PacketResponder (\\d+) for block (blk_-?\\d+) terminating",
+    "Component": "dfs.DataNode$PacketResponder",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E4",
+    "Template": "Received block <*> of size <*> from <*>",
+    "Regex": "Received block (blk_-?\\d+) of size (\\d+) from (\\S+)",
+    "Component": "dfs.DataNode$PacketResponder",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E5",
+    "Template": "BLOCK* NameSystem.addStoredBlock: blockMap updated: <*> is added to <*> size <*>",
+    "Regex": "BLOCK\\* NameSystem\\.addStoredBlock: blockMap updated: (\\S+) is added to (blk_-?\\d+) size (\\d+)",
+    "Component": "dfs.FSNamesystem",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E6",
+    "Template": "<*> Served block <*> to <*>",
+    "Regex": "(\\S+) Served block (blk_-?\\d+) to (\\S+)",
+    "Component": "dfs.DataNode$DataXceiver",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E7",
+    "Template": "Verification succeeded for block <*>",
+    "Regex": "Verification succeeded for block (blk_-?\\d+)",
+    "Component": "dfs.DataNode$BlockReceiver",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E8",
+    "Template": "Starting thread to transfer block <*> to <*>",
+    "Regex": "Starting thread to transfer block (blk_-?\\d+) to (\\S+)",
+    "Component": "dfs.DataNode$DataTransfer",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E9",
+    "Template": "BLOCK* ask <*> to replicate <*> to datanode(s) <*>",
+    "Regex": "BLOCK\\* ask (\\S+) to replicate (blk_-?\\d+) to datanode\\(s\\) (\\S+)",
+    "Component": "dfs.FSNamesystem",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E10",
+    "Template": "BLOCK* ask <*> to delete <*>",
+    "Regex": "BLOCK\\* ask (\\S+) to delete (blk_-?\\d+)",
+    "Component": "dfs.FSNamesystem",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E11",
+    "Template": "Deleting block <*> file <*>",
+    "Regex": "Deleting block (blk_-?\\d+) file (\\S+)",
+    "Component": "dfs.DataNode$FSDataset",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E12",
+    "Template": "BLOCK* NameSystem.delete: <*> is added to invalidSet of <*>",
+    "Regex": "BLOCK\\* NameSystem\\.delete: (blk_-?\\d+) is added to invalidSet of (\\S+)",
+    "Component": "dfs.FSNamesystem",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E13",
+    "Template": "Transmitted block <*> to <*>",
+    "Regex": "Transmitted block (blk_-?\\d+) to (\\S+)",
+    "Component": "dfs.DataNode$DataTransfer",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E14",
+    "Template": "Updating block <*> to state <*>",
+    "Regex": "Updating block (blk_-?\\d+) to state (\\S+)",
+    "Component": "dfs.FSNamesystem",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E15",
+    "Template": "BLOCK* removing block <*> from neededReplications as it does not belong to any file",
+    "Regex": "BLOCK\\* removing block (blk_-?\\d+) from neededReplications as it does not belong to any file",
+    "Component": "dfs.FSNamesystem",
+    "Level": "INFO",
+    "Type": "normal"
+  },
+  {
+    "EventId": "E16",
+    "Template": "PacketResponder <*> for block <*> Interrupted",
+    "Regex": "PacketResponder (\\d+) for block (blk_-?\\d+) Interrupted",
+    "Component": "dfs.DataNode$PacketResponder",
+    "Level": "WARN",
+    "Type": "anomaly"
+  },
+  {
+    "EventId": "E17",
+    "Template": "Unexpected error trying to delete block <*>. BlockInfo not found",
+    "Regex": "Unexpected error trying to delete block (blk_-?\\d+)\\. BlockInfo not found",
+    "Component": "dfs.FSNamesystem",
+    "Level": "ERROR",
+    "Type": "anomaly"
+  },
+  {
+    "EventId": "E18",
+    "Template": "Verification failed for block <*>",
+    "Regex": "Verification failed for block (blk_-?\\d+)",
+    "Component": "dfs.DataNode$BlockReceiver",
+    "Level": "ERROR",
+    "Type": "anomaly"
+  },
+  {
+    "EventId": "E19",
+    "Template": "Exception in receiveBlock for block <*>: Connection reset by peer",
+    "Regex": "Exception in receiveBlock for block (blk_-?\\d+): Connection reset by peer",
+    "Component": "dfs.DataNode$BlockReceiver",
+    "Level": "ERROR",
+    "Type": "anomaly"
+  },
+  {
+    "EventId": "E20",
+    "Template": "Write block <*> failed with timeout after <*> ms",
+    "Regex": "Write block (blk_-?\\d+) failed with timeout after (\\d+) ms",
+    "Component": "dfs.DataNode$DataXceiver",
+    "Level": "ERROR",
+    "Type": "anomaly"
+  },
+  {
+    "EventId": "E21",
+    "Template": "BLOCK* Cannot replicate block <*>, no target datanode available",
+    "Regex": "BLOCK\\* Cannot replicate block (blk_-?\\d+), no target datanode available",
+    "Component": "dfs.FSNamesystem",
+    "Level": "WARN",
+    "Type": "anomaly"
+  },
+  {
+    "EventId": "E22",
+    "Template": "PendingReplicationMonitor timed out block <*>",
+    "Regex": "PendingReplicationMonitor timed out block (blk_-?\\d+)",
+    "Component": "dfs.FSNamesystem",
+    "Level": "WARN",
+    "Type": "anomaly"
+  },
+  {
+    "EventId": "E23",
+    "Template": "DataStreamer Exception: block <*> generation stamp mismatch",
+    "Regex": "DataStreamer Exception: block (blk_-?\\d+) generation stamp mismatch",
+    "Component": "dfs.DataStreamer",
+    "Level": "ERROR",
+    "Type": "anomaly"
+  },
+  {
+    "EventId": "E24",
+    "Template": "Checksum error while reading block <*> at offset <*>",
+    "Regex": "Checksum error while reading block (blk_-?\\d+) at offset (\\d+)",
+    "Component": "dfs.DataNode$BlockReceiver",
+    "Level": "ERROR",
+    "Type": "anomaly"
+  },
+  {
+    "EventId": "E25",
+    "Template": "Target datanode <*> unreachable for block <*>",
+    "Regex": "Target datanode (\\S+) unreachable for block (blk_-?\\d+)",
+    "Component": "dfs.DataNode$DataTransfer",
+    "Level": "WARN",
+    "Type": "anomaly"
+  }
+]

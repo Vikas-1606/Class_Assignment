@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lstm-log-analysis"
+version = "0.1.0"
+description = "Deep Learning for System Log Anomaly Detection using TensorFlow/Keras and LSTMs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+    { name = "MLOps & Security Intelligence Team" }
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: System :: Monitoring",
+]
+dependencies = [
+    "tensorflow>=2.15.0",
+    "keras>=3.0.0",
+    "numpy>=1.24.0,<2.0.0",
+    "pandas>=2.0.0",
+    "scikit-learn>=1.3.0",
+    "matplotlib>=3.8.0",
+    "seaborn>=0.13.0",
+    "click>=8.1.0",
+    "tqdm>=4.66.0",
+    "pyyaml>=6.0.1",
+    "pytest>=7.4.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "flake8>=6.0.0",
+    "black>=23.7.0",
+    "isort>=5.12.0",
+    "nbformat>=5.9.0",
+    "ipykernel>=6.25.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --import-mode=importlib"
+testpaths = ["tests", "src/test_scripts"]
+python_files = ["test_*.py"]
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::UserWarning",
+]
